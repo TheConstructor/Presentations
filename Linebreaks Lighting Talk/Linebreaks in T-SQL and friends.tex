@@ -220,21 +220,21 @@ When displaying (or printing) a text file, this control character causes the tex
 \begin{frame}{Idea \& Implementation}
 \begin{columns}
     \column{.60\textwidth}
+        There are three common encodings of line breaks in computers:
         \begin{itemize}
-        \item There are three common encodings of line breaks in computers:
-            \begin{itemize}
-            \item character 13 followed by character 10 (Dos/Windows; \texttt{CR LF}; C-like: \texttt{\textbackslash{}r\textbackslash{}n}; PoSh: \texttt{\`{}r\`{}n})\\
-            Modelled after how a type-writer behaves, when you switch to a new line
-            \item character 10 (Unix/Linux; \texttt{LF}; C-like: \texttt{\textbackslash{}n}; PoSh: \texttt{\`{}n})\\
-            Common with programmers/the web for brevity
-            \item character 13 (Mac; \texttt{CR}; C-like: \texttt{\textbackslash{}r}; PoSh: \texttt{\`{}r})\\
-            After Mac OS X adopted the Unix standard of \texttt{LF}, this is mostly extinct
-            \end{itemize}
+            \item \texttt{character 13 (carriage-return) followed by 10 (line-feed)}\\
+            \smallskip\scriptsize(Dos/Windows; \texttt{CR LF}; C-like: \texttt{\textbackslash{}r\textbackslash{}n}; PoSh: \texttt{\`{}r\`{}n})\\
+            \normalsize{}Modelled after how a type-writer behaves, when you switch to a new line
+            \item \texttt{character 10}\\
+            \smallskip\scriptsize(Unix/Linux; \texttt{LF}; C-like: \texttt{\textbackslash{}n}; PoSh: \texttt{\`{}n})\\
+            \normalsize{}Common with programmers/the web for brevity
+            \item \texttt{character 13}\\
+            \smallskip\scriptsize(Mac; \texttt{CR}; C-like: \texttt{\textbackslash{}r}; PoSh: \texttt{\`{}r})\\
+            \normalsize{}After Mac OS X adopted the Unix standard of \texttt{LF}, this is mostly extinct
         \end{itemize}
     \column{.40\textwidth}
         \begin{center}
-            \todo{Image of a typewriter or similar}
-            %\adjustimage{max width={1.0\columnwidth},max height={8cm},keepaspectratio}{graphics/Multitool}
+            \adjustimage{max width={1.0\columnwidth},max height={8cm},keepaspectratio}{graphics/typewriter}
         \end{center}
     \end{columns}
 \end{frame}
