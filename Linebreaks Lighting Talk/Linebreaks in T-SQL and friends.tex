@@ -285,8 +285,7 @@ SELECT x='One'+CHAR(13)+CHAR(10)+'Two' FOR XML PATH;
         \end{itemize}
     \column{.40\textwidth}
         \begin{center}
-            \todo{Image of settings}
-            %\adjustimage{max width={1.0\columnwidth},max height={8cm},keepaspectratio}{graphics/Multitool}
+            \adjustimage{max width={1.0\columnwidth},max height={7cm},keepaspectratio}{graphics/lighthouse}%
         \end{center}
     \end{columns}
 \end{frame}
@@ -304,9 +303,9 @@ SELECT x='One'+CHAR(13)+CHAR(10)+'Two' FOR XML PATH;
 \begin{columns}
     \column{.60\textwidth}
         \begin{itemize}
-        \item<1,4| only@1,4> SSMS will \textbf{by default} discard line-breaks in grid-results!
-        \item<2-> There is one setting to change it for the current session/tab (Query \textrightarrow{} Query Options…)\only<2>{\\\adjustimage{max width={1.0\columnwidth},max height={4cm},keepaspectratio}{graphics/menu_query_query_options}}
-        \item<3-> and \textbf{another} to change it for new sessions (Tools \textrightarrow{} Options)\only<3>{\\\adjustimage{max width={0.9\columnwidth},max height={4cm},keepaspectratio}{graphics/menu_tools_options}}
+        \item<1| only@1> SSMS will \textbf{by default} discard line-breaks in grid-results!
+        \item<2-> There is one setting to change it for the current session/tab (\texttt{Query} \textrightarrow{} \texttt{Query Options…})\only<2>{\\\adjustimage{max width={1.0\columnwidth},max height={4cm},keepaspectratio}{graphics/menu_query_query_options}}
+        \item<3-> and \textbf{another} to change it for new sessions (\texttt{Tools} \textrightarrow{} \texttt{Options})\only<3>{\\\adjustimage{max width={0.9\columnwidth},max height={4cm},keepaspectratio}{graphics/menu_tools_options}}
         \end{itemize}
     \column{.40\textwidth}
         \begin{center}
@@ -314,6 +313,15 @@ SELECT x='One'+CHAR(13)+CHAR(10)+'Two' FOR XML PATH;
             \only<3->{\adjustimage{max width={1.0\columnwidth},max height={4cm},keepaspectratio}{graphics/options}}
         \end{center}
     \end{columns}
+\end{frame}
+
+\subsection[ADS]{Azure Data Studio}
+\begin{frame}{Azure Data Studio}
+    Under Settings go to \texttt{Data} \textrightarrow{} \texttt{Query Editor} \textrightarrow{} \texttt{Results: Copy Remove New Line} (queryEditor.results.copyRemoveNewLine); immediately takes effect
+
+    \begin{center}
+        \adjustimage{max width={1.0\columnwidth},max height={5cm},keepaspectratio}{graphics/ads_options}
+    \end{center}
 \end{frame}
 
 \section{Summary}
@@ -329,8 +337,8 @@ SELECT x='One'+CHAR(13)+CHAR(10)+'Two' FOR XML PATH;
     \end{itemize}
     \column{.40\textwidth}
         \begin{center}
-            \todo{nice summary-image}
-            %\adjustimage{max width={1.0\columnwidth},max height={8cm},keepaspectratio}{graphics/D-svlGFWsAErN5b}%
+            \adjustimage{max width={1.0\columnwidth},max height={8cm},keepaspectratio}{graphics/quirks}
+            \tiny(Author unknown)
         \end{center}
 \end{columns}
 \end{frame}
