@@ -324,6 +324,24 @@ SELECT x='One'+CHAR(13)+CHAR(10)+'Two' FOR XML PATH;
     \end{center}
 \end{frame}
 
+\subsection{Git}
+\begin{frame}{Git}
+    \begin{columns}
+    \column{.60\textwidth}
+        \begin{itemize}
+            \item Git has \texttt{core.eol} which can be set to \texttt{lf}, \texttt{crlf} or \texttt{native} (which is the default)\\
+            \url{https://git-scm.com/docs/git-config\#Documentation/git-config.txt-coreeol}
+            \item Effectively Git will try to only store LF in text-files, but restore them with the correct line-breaks
+            \item This is the reason why text-files downloaded from e.g. GitHub may have LF as line-breaks
+            \item A similar 'transport' mechanism may be known from FTP
+        \end{itemize}
+    \column{.40\textwidth}
+        \begin{center}
+            \adjustimage{max width={1.0\columnwidth},max height={7cm},keepaspectratio}{graphics/transport}%
+        \end{center}
+    \end{columns}
+\end{frame}
+
 \section{Summary}
 
 %\subsection*{Summary}
