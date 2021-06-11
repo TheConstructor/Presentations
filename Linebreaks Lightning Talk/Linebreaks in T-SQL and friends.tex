@@ -2,7 +2,7 @@
 % Please see http://mirror.ox.ac.uk/sites/ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf
 %%
 %\documentclass[ngerman]{beamer}
-\documentclass[english,aspectratio=169]{beamer}
+\documentclass[english,aspectratio=169,handout]{beamer}
 
 %\usepackage{pgfpages}
 %\setbeameroption{second mode text on second screen=right}
@@ -90,7 +90,8 @@
 
 %\usetheme{Copenhagen}
 %\useoutertheme{shadow}
-\usetheme[hideothersubsections]{Hannover}
+%\usetheme[hideothersubsections]{Hannover}
+\usetheme{Hannover}
 %\usetheme{Hannover}
 
 %\usepackage{fontspec}
@@ -281,7 +282,7 @@ SELECT x='One'+CHAR(13)+CHAR(10)+'Two' FOR XML PATH;
         \begin{itemize}
             \item Generally all characters are taken as they are (within the collation)
             \item To get one \lstinline[language=SQL]{'} write \lstinline[language=SQL]{''}
-            \item There is however 'Line Continuation' \only<1>{\lstinputlisting[language=SQL,linerange=1-5]{demos/line-continuation.sql}}\only<2>{\lstinputlisting[language=SQL,linerange=1-6]{demos/line-continuation.sql}}
+            \item There is however 'Line Continuation' \only<1|handout:0>{\lstinputlisting[language=SQL,linerange=1-5]{demos/line-continuation.sql}}\only<2>{\lstinputlisting[language=SQL,linerange=1-6]{demos/line-continuation.sql}}
         \end{itemize}
     \column{.40\textwidth}
         \begin{center}
@@ -294,7 +295,7 @@ SELECT x='One'+CHAR(13)+CHAR(10)+'Two' FOR XML PATH;
 \begin{frame}{Escaping line-continuation}
 \begin{itemize}
     \item \url{https://docs.microsoft.com/en-us/sql/t-sql/language-elements/sql-server-utilities-statements-backslash} \textbf{does not list any escapes for line-continuation}
-    \item But you can do this \lstinputlisting[language=SQL,linerange=9-14]{demos/line-continuation.sql}
+    \item But you can do this \lstinputlisting[language=SQL,linerange=9-16]{demos/line-continuation.sql}
 \end{itemize}
 \end{frame}
 
@@ -304,8 +305,8 @@ SELECT x='One'+CHAR(13)+CHAR(10)+'Two' FOR XML PATH;
     \column{.60\textwidth}
         \begin{itemize}
         \item<1| only@1> SSMS will \textbf{by default} discard line-breaks in grid-results!
-        \item<2-> There is one setting to change it for the current session/tab (\texttt{Query} \textrightarrow{} \texttt{Query Options…})\only<2>{\\\adjustimage{max width={1.0\columnwidth},max height={4cm},keepaspectratio}{graphics/menu_query_query_options}}
-        \item<3-> and \textbf{another} to change it for new sessions (\texttt{Tools} \textrightarrow{} \texttt{Options})\only<3>{\\\adjustimage{max width={0.9\columnwidth},max height={4cm},keepaspectratio}{graphics/menu_tools_options}}
+        \item<2-> There is one setting to change it for the current session/tab (\texttt{Query} \textrightarrow{} \texttt{Query Options…})\only<2|handout:0>{\\\adjustimage{max width={1.0\columnwidth},max height={4cm},keepaspectratio}{graphics/menu_query_query_options}}
+        \item<3-> and \textbf{another} to change it for new sessions (\texttt{Tools} \textrightarrow{} \texttt{Options})\only<3|handout:0>{\\\adjustimage{max width={0.9\columnwidth},max height={4cm},keepaspectratio}{graphics/menu_tools_options}}
         \end{itemize}
     \column{.40\textwidth}
         \begin{center}
